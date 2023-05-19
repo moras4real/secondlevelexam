@@ -10,49 +10,38 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy653b9q64WdZWQUiU+Q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D60P9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="disp"></div>
     <script>
-           class Car {
-                constructor(model,color,engine,year){
-                    this.model = model;
-                    this.color = color;
-                    this.engine = engine;
-                    this.year = year
+        if (localStorage.combApp){
+    soFomb = JSON.parse(localStorage.getItem("soApp"))
+    }           
+           class Student {
+                constructor(textbook,uniform,shoe,bag){
+                    this.textbook = textbook;
+                    this.uniform = uniform;
+                    this.shoe = shoe;
+                    this.bag = bag
                 }
-                move(){
-                    console.log(`${this.model} is painted in ${this.color} and it was produced in the year ${this.year}`);
-                }
-                go(){
-                    alert(`This is ${this.model}`)
-                }
+                people(){
+                    console.log(`${this.textbook} textbook is accepted and ${this.uniform} with ${this.shoe} shoe`);
+                }               
            }
 
-           let car3 = new Car('Nissan','red','v8',1990)
-           let car4 = new Car('Toyota','blue','v8',2003) 
-           let car5 = new Car('Honda','green','v8', 2004)
-           console.log(car3,car4,car5);
+           let student1 = new Student('Yoruba','white','size10','big')
+           let student2 = new Student('English','green','size15','large') 
+           let student3 = new Student('Mathematics','purple','size20','midium')
+           let student4 = new Student('Commerce','white','size10','big')
+           let student5 = new Student('Economics','green','size15','large') 
+           let student6 = new Student('Physics','purple','size20','midium')
+           let student7 = new Student('Agric','white','size10','big')
+           let student8 = new Student('Phonics','green','size15','large') 
+           let student9 = new Student('FineArt','purple','size20','midium')
+           let student10 = new Student('Social','purple','size20','midium')
+        console.log(student1,student2,student3,student4,student5,student6,student7,student8,student9,student10);     
 
-           console.log (car3,car4,car5)
-           car3.move()
-           car4.move()
-           car5.move()
-           car3.go()
-           car4.go()
-           car5.go()
-
-
-        //    class Student {
-        //         constructor(textbook,uniform,shoe,bag){
-        //             this.textbook = textbook;
-        //             this.uniform = uniform;
-        //             this.shoe = shoe;
-        //             this.bag = bag
-        //         }
-        //    }
-
-        //    let student3 = new Student('Yoruba','white','size10','big')
-        //    let student4 = new Student('English','green','size15','large') 
-        //    let student5 = new Student('Mathematics','purple','size20','midium')
-        //    console.log(student3,student4,student5);
+           
+    localStorage.setItem("soApp",JSON.stringify(soFomb))              
+                displayItems(allItems)
         </script>
 </body>
 </html>
